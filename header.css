@@ -14,11 +14,11 @@
 	transform: translate(-50%, -50%);
 }
 
-a{
+#b a{
 	display: block;
 	width: 200px;
 	height: 40px;
-	line-height: 40px;
+	line-height: 35px;
 	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
 	text-decoration: none;
@@ -30,12 +30,12 @@ a{
 	transition: all .35s;
 }
 
-a span{
+#b a span{
 	position: relative;
 	z-index: 2;
 }
 
-a:after{
+#b a:after{
 	position: absolute;
 	content: "";
 	top: 0;
@@ -46,11 +46,11 @@ a:after{
 	transition: all, .35s;
 }
 
-a:hover{
+#b a:hover{
 	color: white;
 }
 
-a:hover:after{
+#b a:hover:after{
 	width: 100%;
 }
 
