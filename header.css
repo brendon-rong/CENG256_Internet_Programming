@@ -1,17 +1,31 @@
 /*https://codepen.io/thelaazyguy/pen/brryVq Source for button */
 
+.wrapper3{
+    position: fixed;
+    top: 35px;
+    left: 1070px;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper2{
+    position: fixed;
+    top: 35px;
+    left: 840px;
+    transform: translate(-50%, -50%);
+}
+
 .wrapper1{
-	position: fixed;
-	top: 35px;
-	left: 900px;
-	transform: translate(-50%, -50%);
+    position: fixed;
+    top: 35px;
+    left: 610px;
+    transform: translate(-50%, -50%);
 }
 
 .wrapper{
-	position: fixed;
-	top: 35px;
-	left: 620px;
-	transform: translate(-50%, -50%);
+    position: fixed;
+    top: 35px;
+    left: 380px;
+    transform: translate(-50%, -50%);
 }
 
 #b a{
