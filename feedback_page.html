@@ -3,11 +3,15 @@
 
     <head>
         <title>Feedback Page</title>
+        <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+        <script src="feedback.js">  </script>
+
     </head>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap" rel="stylesheet"> /* Link to font for "Whoops!" title top left */
     <link href="about_page.css" rel="stylesheet">
     <link href="infopage.css" rel="stylesheet">
+    <link href="feedback.css" rel="stylesheet">
 
     <body style="background-color:white;">
         <div class="rectangle"></div>
@@ -29,20 +33,40 @@
         <h1>Contact/Feedback</h1>
         <p>Welcome to the office of Whoops! at .....</p>
         <p>If you would like to contact us regarding food suggestions or to simply share information please complete the form below.</p>
-        <form action="https://www.apple.com/ca/ios/app-store/">
-            <br></br>
-            <h3></h3>
-            Your Email:<br><input type="text" placeholder="Enter Email Address..." name="email" size="45"><br></br>
-            Subject:<br><input type="text" placeholder="Enter Email Address..." name="email" size="45"><br></br>
-            First Name:<br><input type="text" placeholder="First Name..." name="email" size="45"><br></br>
-            Last Name:<br><input type="text" placeholder="Last Name..." name="email" size="45"><br></br>
-            Phone:<br><input type="text" placeholder="Enter Phone Number..." name="email" size="45"><br></br>
-            <textarea style="max-width:800px" rows="10" placeholder="Type your review here..." name="review" id="review_review"></textarea><br></br>
-            <input type="submit" value="Submit">
+        <form>
+            <label for ="email" id="email_label">Your Email <span class="redText">*</span></label>
+            <input type="text" id="email"placeholder="Enter Email Address..." name="email" size="45">
+            <label class="error" for="email" id="email_error">Email is required</label>
+
+            <label for ="subject" id="subject_label">Subject  <span class="redText">*</span></label>
+            <input type="text" id="subject" placeholder="Enter First Name..." name="subject" size="45">
+            <label class="error" for="subjet" id="subject_error">Subject is required</label>
+
+            <label for ="firstName" id="firstName_label">First Name  <span class="redText">*</span></label>
+            <input type="text" id="firstName" placeholder="First Name..." name="firstName" size="45">
+            <label class="error" for="firstName" id="firstName_error">First Name is required</label>
+
+            <label for ="lastName" id="lastName_label">Last Name  <span class="redText">*</span></label>
+            <input type="text" id="lastName" placeholder="Last Name..." name="lastName" size="45">
+            <label class="error" for="lastName" id="lastName_error">Last Name is required</label>
+
+            <label for ="phone" id="phone_label">Phone <span class="redText">*</span></label>
+            <input type="text" id="phone" placeholder="Enter Phone Number..." name="phoneNumber" size="45">
+            <label class="error" for="phone" id="phone_error">Phone Number is required</label>
+
+            <label for = "Comments">Comments and suggestions</label>
+            <textarea style="max-width:300px" rows="4" placeholder="Type your review here..." name="review" id="review_review"></textarea><br></br>
+
+            <input type="submit" name="submit" value="Submit" id="submit">
+
         </form>
 
 
+
+
         <br></br></br></br><br></br></br></br></br></br></br><br></br></br></br></br></br></br></br></br></br></br><br></br>
+
+
 
         <footer>
             <h1 style="color:Black">Whoops!</h1><br>

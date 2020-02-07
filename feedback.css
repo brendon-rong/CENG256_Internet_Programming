@@ -1,0 +1,29 @@
+
+label
+{
+    display:block;
+    margin-bottom:10px;
+}
+input[type=text]
+{
+    display:block;
+    border:solid 1px #4d3a24;
+    width:250px;
+    margin-bottom:10px;
+    height:24px;
+}
+textarea
+{
+    display:block;
+    border:solid 1px #4d3a24;
+    width:100%;
+    margin-bottom:10px;
+}
+
+.redText{
+    color:red
+};
+
+.error {
+    color:red
+};
