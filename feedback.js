@@ -17,7 +17,7 @@ function validate(event) {
     var hasNumber = /\d/;
     var hasLetter = /\[a-zA-Z]/;
     var hasSpecial = /\[$!]/;
-    //alert("All Fields: " + allFields);
+    //
 
 
     if (firstName == "") {
@@ -52,5 +52,5 @@ function validate(event) {
         return false;
     }
 
-
+alert("All Fields: " + allFields);
 }
