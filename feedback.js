@@ -8,7 +8,7 @@ function init() {
 }
 
 function validate(event) {
-
+    $(".error").hide();
     var firstName = $("#firstName").val();
     var lastName = $("#lastName").val();
     var email = $("#email").val();
@@ -17,42 +17,40 @@ function validate(event) {
     var hasNumber = /\d/;
     var hasLetter = /\[a-zA-Z]/;
     var hasSpecial = /\[$!]/;
-    alert("All Fields: " + allFields);
+    //alert("All Fields: " + allFields);
 
-/*
+
     if (firstName == "") {
-        $("input#firstname").attr("placeholder", "First Name Required");
-        $("input#firstname").attr("class", "error");
+        $("label#firstName_error").show();
+        //$("label#firstName_error").attr("class", "error");
+        //return false;
     }
 
     if (lastName == "") {
-        $("input#lastname").attr("placeholder", "Last Name Required");
-        $("input#lastname").attr("class", "error");
+
+        //return false;
     }
 
     if (email == "") {
-        $("input#email").attr("placeholder", "Email Required");
-        $("input#email").attr("class", "error");
+        //$("input#email").attr("placeholder", "Email Required");
+        //$("input#email").attr("class", "error");
+        //return false;
     }
 
-    if (password == "") {
-        $("input#password").attr("placeholder", "Password Required");
-        $("input#password").attr("class", "error");
+    if (phone == "") {
+
+        //return false;
     }
 
-    if ((allFields == "") ||(firstName == "")||(lastName == "")||(email == "")||(password == "")) {
-        $("input").attr("class", "input");
+    if ((allFields == "") ||(firstName == "")||(lastName == "")||(email == "")||(phone == "")) {
+        $(".error").show();
         return false;
     }
+
     if((hasNumber.test(firstName) || hasNumber.test(lastName)) == true){
         alert("No numbers allowed");
         return false;
     }
 
-    if(password.length < 8 && (hasLetter.test(password) && hasNumber.test(password) && hasSpecial.test(password)) == false){
-        alert("Password incorrect");
-        return false;
-    }
-*/
 
 }

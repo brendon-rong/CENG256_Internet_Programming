@@ -1,8 +1,7 @@
 
 label
 {
-    display:block;
-    margin-bottom:10px;
+    display:inline-block;
 }
 input[type=text]
 {
@@ -10,6 +9,7 @@ input[type=text]
     border:solid 1px #4d3a24;
     width:250px;
     margin-bottom:10px;
+    margin-top:10px;
     height:24px;
 }
 textarea
@@ -18,12 +18,13 @@ textarea
     border:solid 1px #4d3a24;
     width:100%;
     margin-bottom:10px;
+
 }
 
 .redText{
     color:red
 };
 
-.error {
-    color:red
+ .error{
+    color:red;
 };
