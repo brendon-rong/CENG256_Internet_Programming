@@ -1,3 +1,6 @@
+* {
+    
+}
 .logo {
     font-family: 'Satisfy', cursive;
     
@@ -5,4 +8,10 @@
 
 .font{
     font-family: 'Lato', sans-serif;
+}
+
+ul {
+  list-style-type: none; //no bullets
+  margin: 0;
+  padding: 0;
 }
