@@ -1,30 +1,57 @@
-
-label
-{
-    display:inline-block;
-}
-input[type=text]
-{
-    display:block;
-    border:solid 1px #4d3a24;
-    width:250px;
-    margin-bottom:10px;
-    margin-top:10px;
-    height:24px;
-}
-textarea
-{
-    display:block;
-    border:solid 1px #4d3a24;
-    width:100%;
-    margin-bottom:10px;
-
+h1 {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.redText{
-    color:red
-};
+label {
+  display: inline-block;
+}
 
- .error{
-    color:red;
-};
+form {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type=text] {
+  display: block;
+  /* border: solid 1px #4d3a24; */
+  width: 250px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 24px;
+}
+
+textarea {
+  display: block;
+  border: solid 1px #4d3a24;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.text-line {
+  background-color: transparent;
+  /* color: #eeeeee; */
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #000000 1px;
+  padding: 3px 10px;
+}
+
+.redText {
+  color: red
+}
+
+.error {
+  color: red;
+}
+
+.feedText{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: normal !important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap'); /* This is just here temporarily*/

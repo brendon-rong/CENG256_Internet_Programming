@@ -12,7 +12,7 @@ function validate(event) {
     var firstName = $("#firstName").val();
     var lastName = $("#lastName").val();
     var email = $("#email").val();
-    var phone = $("#phone").val();
+    var subject = $("#subject").val();
     var allFields = firstName + lastName + email + phone;
     var hasNumber = /\d/;
     var hasLetter = /\[a-zA-Z]/;
@@ -22,33 +22,31 @@ function validate(event) {
 
     if (firstName == "") {
         $("label#firstName_error").show();
-        //$("label#firstName_error").attr("class", "error");
-        //return false;
+        // return false;
     }
 
     if (lastName == "") {
-
-        //return false;
+        $("label#lastName_error").show();
+        // return false;
     }
 
     if (email == "") {
-        //$("input#email").attr("placeholder", "Email Required");
-        //$("input#email").attr("class", "error");
-        //return false;
+      $("label#email_error").show();
+        // return false;
     }
 
-    if (phone == "") {
+    if (subject == "") {
+      $("label#subject_error").show();
+      // return false;
 
-        //return false;
     }
 
-    if ((allFields == "") ||(firstName == "")||(lastName == "")||(email == "")||(phone == "")) {
-        $(".error").show();
+    if ((firstName == "")||(lastName == "")||(email == "")||(phone == "")) {
         return false;
     }
 
     if((hasNumber.test(firstName) || hasNumber.test(lastName)) == true){
-        alert("No numbers allowed");
+        alert("You have numbers in your name?");
         return false;
     }
 
