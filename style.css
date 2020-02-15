@@ -13,13 +13,13 @@
 nav{
 	overflow: hidden;
 	width: 100%;
-	height: 100px;
+	height: 80px;
 	background-color: black;
 }
 
 ul li{
 	float: left;
-	line-height: 100px;
+	line-height: 80px;
 }
 
 ul li a{
@@ -52,7 +52,7 @@ ul li a:hover {
 footer{
 	overflow: hidden;
 	width: 100%;
-	height: 100px;
+	height: 80px;
 	background-color: black;
 	position: fixed;
 	left: 0;
