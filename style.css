@@ -23,7 +23,7 @@ ul li{
 }
 
 ul li a{
-	display: block;
+	display: inline-block;
 	color: white;
 	font-family: 'Lato', sans-serif;
 	font-weight: bold;
@@ -54,4 +54,29 @@ footer{
 	position: fixed;
 	left: 0;
 	bottom: 0;
+}
+
+.responsive_menu{
+  width: 100%
+  padding: 10px 20px;
+  background-color: dimgrey;
+  text-align: right;
+  color: white;
+  font-size: 30px
+  box-sizing: border-box;
+  display: none;
+}
+
+@media (max-width: 600px){
+  .responsive_menu{
+    display: block;
+  }
+  ul{
+    width: 100%;
+  }
+
+  ul li{
+    display: block;
+    text-align: center;
+  }
 }
