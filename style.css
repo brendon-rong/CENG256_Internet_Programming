@@ -53,4 +53,8 @@ footer{
 	overflow: hidden;
 	width: 100%;
 	height: 100px;
+	background-color: black;
+	position: fixed;
+	left: 0;
+	bottom: 0;
 }
