@@ -24,7 +24,7 @@ ul li{
 
 ul li a{
 	display: block;
-	color: black;
+	color: white;
 	font-family: 'Lato', sans-serif;
 	font-weight: bold;
 	font-size: 25px;
@@ -33,14 +33,13 @@ ul li a{
 
 ul li a:hover {
 	background-color: #505050;
-	color: white;
   transition: all 0.5s ease 0s;
 }
 
 .logo{
 	font-family: 'Satisfy', cursive;
 	font-size: 40px;
-	color: mediumblue;
+	color: deepskyblue;
 }
 
 .login{
