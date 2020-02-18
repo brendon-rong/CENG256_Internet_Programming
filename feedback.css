@@ -47,7 +47,7 @@ textarea {
   color: red;
 }
 
-.feedText{
+#feed .feedText{
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: normal !important;
