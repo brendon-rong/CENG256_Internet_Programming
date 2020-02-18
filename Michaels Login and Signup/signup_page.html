@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/18de49befa.js"></script>
+    <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+    <script src="signup.js"></script>
+    <script src="script.js"></script>
+
+    <style>
+      form .error {
+        color: #ffff;
+      }
+
+      .rectangle {
+        height: 410px;
+        width: 200px;
+        background-color: dimgray;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);
+      }
+
+      .button {
+        background-color: deepskyblue;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .buttonBlue:hover {
+        background-color: white;
+        color: deepskyblue;
+      }
+    </style>
+      
+    <title>Sign Up</title>
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <div class="responsive_menu_div" onclick="menuButton()">
+          <div id="bar_icon_div">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <ul class="nav_ul">
+          <li><a id="logo" href="#">whoops!</a></li>
+          <li><a href="#">Information</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li id="login_li"><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <center>
+        <div class="container">
+          <br><br><br>
+        <div class="rectangle">
+          <br>
+          <h2 style="font-family: 'Lato', sans-serif; color: white;"><u>Sign Up</u></h2>
+          <br><br>
+
+          <form action="" name="registration">
+
+            <label for="firstname" style="font-family: 'Lato', sans-serif; color: white;">First Name</label><br>
+            <input type="text" name="firstname" id="firstname" placeholder="Homer" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);"/><br>
+            <label class="error" for="firstname" id="firstname_error">This field is required.</label><br>
+
+            <label for="lastname" style="font-family: 'Lato', sans-serif; color: white;">Last Name</label><br>
+            <input type="text" name="lastname" id="lastname" placeholder="Simpson" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);"/><br>
+            <label class="error" for="lastname" id="lastname_error">This field is required.</label><br>
+
+            <label for="email" style="font-family: 'Lato', sans-serif; color: white;">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="example@example.com" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);"/><br>
+            <label class="error" for="email" id="email_error">This field is required.</label><br>
+
+            <label for="password" style="font-family: 'Lato', sans-serif; color: white;">Password</label><br>
+            <input type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);"/><br>
+            <label class="error" for="password" id="password_error">This field is required.</label><br><br>
+
+            <button type="submit" class="button buttonBlue" id="submit_btn" value="Send" style="font-family: 'Lato', sans-serif;"><b>Register</b></button>
+
+          </form>
+
+        </div>
+        </div>
+      <br><p style="font-family: 'Lato', sans-serif;">Already have an account?</p>
+          <p style="font-family: 'Lato', sans-serif;">Login over <b><a href="login_page.html" style="color: black">here</a></b>!</p>
+      </center>
+
+    </main>
+
+    <footer>
+      <!--A copyright in the footer with the student names and id numbers-->
+    </footer>
+
+  </body>
+</html>
