@@ -62,8 +62,41 @@
                 <br>
                 <h1 id="feedbackInfo">Feedback</h1>
 
-                <p>After we deliver the food to you there is a feedback page. If there is anything that we can improve on, feel free to leave a comment. You may access the feeback page through the link <a href="feedback_page.html" style="color: black;" >here</a> or on the home page</p>
+                <p>After we deliver the food to you there is a feedback page. If there is anything that we can improve on, feel free to leave a comment. You may access the feeback page through the link <a href="feedback_page.html" style="text-decoration: none;" style="color: black;" class="example">here</a> or on the home page</p>
 
+                <!-- <button onclick="myFunctions()">Click to change headers to red</button><br> -->
+                <button onclick="myFunction()">Click to highlight links</button><br>
+                <button onclick="myFunctionss()">Click on button to display the companies staff members</button>
+                  <br>
+                <p id="students"> </p>
+
+                <script>
+                // function myFunctions() {
+                //   var x = document.getElementById("aboutUs");
+                //   x.style.color = "red";
+                //   var y = document.getElementById("works");
+                //   y.style.color = "red";
+                //   var z = document.getElementById("orderInfo");
+                //   z.style.color = "red";
+                //   var a = document.getElementById("trackInfo");
+                //   a.style.color = "red";
+                //   var b = document.getElementById("feedbackInfo");
+                //   b.style.color = "red";
+                // }
+
+                function myFunction() {
+                  var x = document.getElementsByClassName("example");
+                  var i;
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.backgroundColor = "yellow";
+                  }
+                }
+
+                function myFunctionss() {
+                  var r = document.getElementById("students");
+                  r.innerHTML="Tyler Ruffolo - N01296762 <br> Brendon Rongcales - N01288965 <br> Michael Tonon - N01323314 <br> Nielsen Gabatin - N01311581 <br> Richard Dannie - N01322927";
+                }
+                </script>
             </article>
         </section>
 
