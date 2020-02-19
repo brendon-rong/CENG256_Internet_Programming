@@ -47,11 +47,14 @@ textarea {
   color: red;
 }
 
-#feed .feedText{
-  font-family: 'Open Sans', sans-serif;
+.feedText {
+  font-family: 'Lato', sans-serif;
   font-size: 20px;
-  font-weight: normal !important;
+  font-weight: normal ;
+  color: white;
+
 }
 
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap'); /* This is just here temporarily*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+/* This is just here temporarily*/
