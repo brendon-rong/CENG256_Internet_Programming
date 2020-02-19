@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Feedback Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link href="feedback.css" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/18de49befa.js"></script>
+  <script src="script.js"></script>
+  <script src="feedback.js"> </script>
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+  <style>
+    form .error {
+      color: #ffff;
+    }
+
+    .rectangle {
+      height: 615px;
+      width: 350px;
+      background-color: dimgray;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);
+    }
+
+    .button {
+      background-color: deepskyblue;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .buttonBlue:hover {
+      background-color: white;
+      color: deepskyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="responsive_menu_div" onclick="menuButton()">
+        <div id="bar_icon_div">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <ul class="nav_ul">
+        <li><a id="logo" href="#">whoops!</a></li>
+        <li><a href="#">Information</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li id="login_li"><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <center>
+      <h1>Contact/Feedback</h1>
+      <p>Welcome to the office of Whoops! at .....</p>
+      <p>If you would like to contact us regarding food suggestions or to simply share information please complete the form below.</p>
+      <br>
+      <div class="container">
+        <div class="rectangle">
+          <form action="successful_feedback_page.html">
+
+            <label for="firstName" id="firstName_label "><span class="feedText"> First Name <span class="redText">*</span></span></label>
+            <label class="error" for="firstName" id="firstName_error"><span class="redText">First Name is required</span></label>
+            <input type="text" class="text-line" id="firstName" placeholder="First Name..." name="firstName" size="45">
+
+            <label for="lastName" id="lastName_label"><span class="feedText">Last Name <span class="redText">*</span></span></label>
+            <label class="error" for="lastName" id="lastName_error"><span class="redText">Last Name is required </span></label>
+            <input type="text" class="text-line" id="lastName" placeholder="Last Name..." name="lastName" size="45">
+
+            <label for="email" id="email_label"><span class="feedText">Your Email <span class="redText">*</span></span></label>
+            <label class="error" for="email" id="email_error"><span class="redText">Email is required</span></label>
+            <input type="text" class="text-line" id="email" placeholder="Enter Email Address..." name="email" size="45">
+
+            <label for="subject" id="subject_label"><span class="feedText">Subject <span class="redText">*</span></span></label>
+            <label class="error" for="subjet" id="subject_error"><span class="redText">Subject is required</span></label>
+            <input type="text" class="text-line" id="subject" placeholder="Enter Subjet..." name="subject" size="45">
+
+            <label for="phone" id="phone_label"><span class="feedText">Phone</span></label>
+            <input type="text" class="text-line" id="phone" placeholder="Enter Phone Number..." name="phoneNumber" size="45">
+
+            <label for="Comments"><span class="feedText">Comments and suggestions</span></label>
+            <textarea style="max-width:300px" rows="4" placeholder="Type your review here..." name="review" id="review_review"></textarea><br></br>
+
+            <button type="submit" class="button buttonBlue" id="submit_btn" value="Send" style="font-family: 'Lato', sans-serif;"><b>Submit</b></button>
+
+        </div>
+      </div>
+
+    </center>
+
+
+  </main>
+  <footer>
+    <!--A copyright in the footer with the student names and id numbers-->
+  </footer>
+</body>
+
+</html>
