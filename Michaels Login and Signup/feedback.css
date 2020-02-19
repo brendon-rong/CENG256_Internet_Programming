@@ -4,6 +4,7 @@ h1 {
 
 label {
   display: inline-block;
+  margin-top: 10px;
 }
 
 form {
@@ -36,11 +37,13 @@ textarea {
   border-left: none;
   border-right: none;
   border-bottom: solid #000000 1px;
-  padding: 3px 10px;
+  padding: 4px 10px;
 }
 
 .redText {
-  color: red
+  color: red;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
 }
 
 .error {
@@ -50,9 +53,8 @@ textarea {
 .feedText {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
-  font-weight: normal ;
+  font-weight: normal;
   color: white;
-
 }
 
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
