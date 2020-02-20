@@ -107,7 +107,7 @@ nav{
 
 	.nav_ul #login_li{
 		float: right;
-		
+
 	}
 }
 
@@ -117,7 +117,7 @@ footer{
 	width: 100%;
 	height: 60px;
 	background-color: dimgray;
-	position: fixed;
+	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom:-50;
 }
