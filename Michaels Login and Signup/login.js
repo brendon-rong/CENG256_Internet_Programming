@@ -22,6 +22,10 @@ function validate(event){
 		return false;
 	}
 
+	if (password != "" && email != ""){
+      	alert("Login Succesful!");
+    }
+
 	var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone;
 
 	return false;
@@ -39,11 +43,16 @@ function validate(event){
         $("input#email").focus();
       }
 
+      if (password != "" && email != ""){
+      	alert("Login Succesful!");
+      }
+
       var password = $("input#password").val();
       if (password == "") {
         $("label#password_error").show();
         $("input#password").focus();
         return false;
       }
+
     });
   });

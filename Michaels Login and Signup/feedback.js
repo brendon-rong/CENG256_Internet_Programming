@@ -32,10 +32,6 @@ function validate(event) {
       $("label#email_error").show();
     }
 
-    if (subject == "") {
-      $("label#subject_error").show();
-    }
-
     if ((firstName == "")||(lastName == "")||(email == "")||(phone == "")) {
         return false;
     }
@@ -43,6 +39,10 @@ function validate(event) {
     if((hasNumber.test(firstName) || hasNumber.test(lastName)) == true){
         alert("You have numbers in your name?");
         return false;
+    }
+
+    if (firstName != "" && lastName != "" && email != ""){
+        alert("Thank you for your submission!");
     }
 
 alert("All Fields: " + allFields);
