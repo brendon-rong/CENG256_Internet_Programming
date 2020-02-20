@@ -153,3 +153,20 @@ footer {
 	font-size: 80px;
 	padding: 0px 20px;
 }
+
+.banner img {
+	width: 100%;
+	height: 750px;
+	align: center;
+}
+
+.banner_header {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Satisfy", cursive;
+	font-weight: bold;
+	font-size: 150px;
+	color: black;
+}

@@ -6,6 +6,7 @@
 		<link href="home_page.css" rel="stylesheet" />
 		<!-- font awesome icons -->
 		<script src="https://kit.fontawesome.com/18de49befa.js"></script>
+		<script src="home_page.js"></script>
 		<title>whoops!</title>
 	</head>
 	<body onresize="showNav()">
@@ -26,7 +27,10 @@
 			</nav>
 		</header>
 		<body onload = "startTimer()">
-			<img id="img" src="images/image1.jpg"style= "width:850px;height:4	00px;">
+			<div class="banner">
+				<img id="homepage_img" src="images/image1.png">
+				<div class="banner_header">Hungry?</div>
+			</div>
 		</body>
 		<footer>
 			<ul class="footer_ul">
@@ -59,26 +63,4 @@
 			</div>
 		</footer>
 	</body>
-	<script src="home_page.js"></script>
-	<script type = "text/javascript">
-		function displayNextImage() {
-		x = (x === images.length - 1) ? 0 : x + 1;
-		document.getElementById("img").src = images[x];
-		}
-
-		function displayPreviousImage() {
-		x = (x <= 0) ? images.length - 1 : x - 1;
-		document.getElementById("img").src = images[x];
-		}
-
-		function startTimer() {
-		setInterval(displayNextImage, 3000);
-		}
-
-		var images = [], x = -1;
-		images[0] = "images/image1.jpg";
-		images[1] = "images/image2.jpg";
-		images[2] = "images/image3.png";
-		images[3] = "images/image4.png";
-	</script>
 </html>
