@@ -1,0 +1,172 @@
+/* import global fonts */
+@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+/* page deafaults */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+a:visited {
+	color: white;
+}
+
+/* navigation bar */
+nav {
+	overflow: auto;
+	width: 100%;
+	background-color: dimgray;
+}
+
+.nav_ul {
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.nav_ul li {
+	display: inline-block;
+}
+
+.nav_ul li:hover {
+	background-color: #505050;
+	transition: all 0.5s ease-out 0s; /* transition: property duration timing-function delay; */
+}
+
+.nav_ul li a {
+	line-height: 60px; /* same as nav */
+	padding: 0px 20px; /* padding: vertical horizontal; */
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+}
+
+/* logo and login have classes to change position and font easily */
+
+/* to make log center aligned you need to make another ul and use  margin: 0 auto; */
+.nav_ul #logo {
+	font-family: "Satisfy", cursive;
+	font-size: 40px;
+	color: deepskyblue;
+}
+
+.nav_ul #login_li {
+	float: right;
+}
+
+/* making the nav bar responsive for small screens */
+.responsive_menu_div {
+	cursor: pointer;
+	display: none;
+	width: 100%;
+	height: 40px;
+	background-color: #404040;
+}
+
+.responsive_menu_div #bar_icon_div {
+	padding: 0px 8px; /* icon has wierd dimensions, this makes it look centered */
+	line-height: 40px; /* center in div */
+	text-align: right;
+	color: white;
+	font-size: 30px;
+}
+
+@media (max-width: 650px) {
+	.responsive_menu_div {
+		display: block; /* display menu on new line above list */
+	}
+
+	.nav_ul {
+		width: 100%;
+	}
+
+	.nav_ul li {
+		display: block;
+	}
+
+	.nav_ul #login_li {
+		display: block;
+		float: left;
+		width: 100%;
+	}
+}
+
+/* footer */
+footer {
+	overflow: auto;
+	width: 100%;
+	height: 130px;
+	background-color: dimgray;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 5px 20px;
+}
+
+.footer_ul {
+	display: inline-block;
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: white;
+}
+
+.twitter_footer {
+	display: inline-block;
+	float: right;
+	line-height: 120px;
+	text-align: center;
+	color: white;
+	font-size: 80px;
+}
+
+.insta_footer {
+	display: inline-block;
+	float: right;
+	line-height: 120px;
+	text-align: center;
+	color: white;
+	font-size: 80px;
+	padding: 0px 20px;
+}
+
+.googleplay_footer {
+	display: inline-block;
+	float: right;
+	line-height: 120px;
+	text-align: center;
+	color: white;
+	font-size: 80px;
+	padding: 0px 20px;
+}
+
+.appstore_footer {
+	display: inline-block;
+	float: right;
+	line-height: 120px;
+	text-align: center;
+	color: white;
+	font-size: 80px;
+	padding: 0px 20px;
+}
+
+.banner img {
+	width: 100%;
+	height: 750px;
+	align: center;
+}
+
+.banner_header {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Satisfy", cursive;
+	font-weight: bold;
+	font-size: 150px;
+	color: black;
+}
