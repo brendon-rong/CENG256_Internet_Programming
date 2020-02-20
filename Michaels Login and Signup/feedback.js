@@ -4,7 +4,7 @@ function init() {
 
     $(".error").hide();
     //    1) All fields are required
-    $("#submit").click(validate);
+    $("#submit_btn").click(validate);
 }
 
 function validate(event) {
@@ -22,23 +22,18 @@ function validate(event) {
 
     if (firstName == "") {
         $("label#firstName_error").show();
-        // return false;
     }
 
     if (lastName == "") {
         $("label#lastName_error").show();
-        // return false;
     }
 
     if (email == "") {
       $("label#email_error").show();
-        // return false;
     }
 
     if (subject == "") {
       $("label#subject_error").show();
-      // return false;
-
     }
 
     if ((firstName == "")||(lastName == "")||(email == "")||(phone == "")) {

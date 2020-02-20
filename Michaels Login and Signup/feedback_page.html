@@ -10,8 +10,9 @@
   <!-- font awesome icons -->
   <script src="https://kit.fontawesome.com/18de49befa.js"></script>
   <script src="script.js"></script>
-  <script src="feedback.js"> </script>
   <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+  <script src="feedback.js"> </script>
+
   <style>
     form .error {
       color: #ffff;
@@ -84,9 +85,16 @@
             <label class="error" for="email" id="email_error"><span class="redText">Email is required</span></label>
             <input type="text" class="text-line" id="email" placeholder="Enter Email Address..." name="email" size="45">
 
-            <label for="subject" id="subject_label"><span class="feedText">Subject <span class="redText">*</span></span></label>
-            <label class="error" for="subjet" id="subject_error"><span class="redText">Subject is required</span></label>
-            <input type="text" class="text-line" id="subject" placeholder="Enter Subjet..." name="subject" size="45">
+            <label for="subject" id="subject_label"><span class="feedText">Select Subject <span class="redText">*</span></span></label>
+            <label class="error" for="subject" id="subject_error"><span class="redText">Subject is required</span></label>
+
+            <select>
+              <option>Select Subject</option>
+              <option>Apples</option>
+              <option>Bananas</option>
+              <option>Grapes</option>
+              <option>Oranges</option>
+            </select>
 
             <label for="phone" id="phone_label"><span class="feedText">Phone</span></label>
             <input type="text" class="text-line" id="phone" placeholder="Enter Phone Number..." name="phoneNumber" size="45">

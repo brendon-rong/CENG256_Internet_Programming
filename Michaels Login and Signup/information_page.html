@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/18de49befa.js"></script>
+  <script src="script.js"></script>
+  <title>Default</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="responsive_menu_div" onclick="menuButton()">
+        <div id="bar_icon_div">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <ul class="nav_ul">
+        <li><a id="logo" href="#">whoops!</a></li>
+        <li><a href="#">Information</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li id="login_li"><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <table>
+      <tr>
+        <td>
+          <div class="article" id="b">
+            <!-- <article> -->
+            <h1 id="aboutUs">About Whoops!</h1>
+
+            <p>Whoops! is a delivery courier website that has hundreds of restaurants to choose from. You order the cuisines from your favorite restaurant or fast food chain and we deliver right to you at a low-price service fee.</p>
+            <br>
+            <br>
+            <h1 id="works">How it works</h1>
+
+            <p>On the website, you can scroll through the feed for inspiration or search for a particular restaurant or cuisine to have the food you love delivered right to you. When you open the website there are recommended foods and restaurants
+              near
+              you. It asks for your area code to figure out the restaurants near you.</p>
+            <br>
+            <br>
+            <h1 id="orderInfo">Order</h1>
+
+            <p>When you find something you like, tap to add it to your cart also, it has a favourite button where you can save the restaurants or cuisine that you love. It has a comment box at the bottom of the page before checking out, to tell us
+              if
+              you have any allergies and modification.
+              When you’re ready to check out, just press the checkout button at the top of your page , this will take you to the check-out page where you pay, you may also choose the option to pay at your door.</p>
+            <br>
+            <br>
+            <h1 id="trackInfo">Track</h1>
+
+            <p>Follow your order online. After your purchase is approved you will be able to track your food being delivered right to your door. Depending on how far it will be pick up the delivery time and delivery fee may vary. When we deliver
+              the
+              food to you there will be a notification on the website notifying you that the food arrived.</p>
+
+            <br>
+            <br>
+            <h1 id="feedbackInfo">Feedback</h1>
+
+            <p>After we deliver the food to you there is a feedback page. If there is anything that we can improve on, feel free to leave a comment. You may access the feeback page through the link <a href="feedback_page.html"
+                style="text-decoration: none;" style="color: black;" class="example">here</a> or on the home page</p>
+
+            <!-- <button onclick="myFunctions()">Click to change headers to red</button><br> -->
+            <button onclick="myFunction()">Click to highlight links</button><br>
+            <button onclick="myFunctionss()">Click on button to display the companies staff members</button>
+            <br>
+            <p id="students"> </p>
+
+            <script>
+
+              function myFunction() {
+                var x = document.getElementsByClassName("example");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.backgroundColor = "yellow";
+                }
+              }
+
+              function myFunctionss() {
+                var r = document.getElementById("students");
+                r.innerHTML = "Tyler Ruffolo - N01296762 <br> Brendon Rongcales - N01288965 <br> Michael Tonon - N01323314 <br> Nielsen Gabatin - N01311581 <br> Richard Dannie - N01322927";
+              }
+            </script>
+            <!-- </article> -->
+            <!-- </section> -->
+          </div>
+        </td>
+
+        <td>
+          <div class="section" id="c">
+            <!-- <section> -->
+            <div class="nav" id="a">
+              <!-- <nav> -->
+              <ul>
+                <a href="homepage.html"> <img src="https://foodsitehome.files.wordpress.com/2019/01/img_7307-1.jpg" id="home" style="width:300px;height:170px;"></a>
+                <br>
+                <a href="order_page.html"> <img src="http://screenshotlibrary.s3.amazonaws.com/form_edit_balance_due_form.png" id="order" style="width:300px;height:400px;"></a>
+                <br>
+                <a href="feedback_page.html"> <img src="images/Feedback.png" id="feedback" style="width:300px;height:400px;"></a>
+              </ul>
+              <!-- </nav> -->
+
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+
+
+  </main>
+  <footer>
+    <!--A copyright in the footer with the student names and id numbers-->
+  </footer>
+</body>
+
+</html>
