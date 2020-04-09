@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+  <style>
+  * {
+  	box-sizing: border-box;
+  	margin: 0;
+  	padding: 0;
+  	list-style: none;
+  	text-decoration: none;
+  }
+
+  a:visited {
+  	color: white;
+  }
+
+  /* navigation bar */
+  nav {
+  	overflow: auto;
+  	width: 100%;
+  	background-color: dimgray;
+  }
+
+  .nav_ul {
+  	margin: 0 auto;
+  	cursor: pointer;
+  }
+
+  .nav_ul li {
+  	display: inline-block;
+  }
+
+  .nav_ul li:hover {
+  	background-color: #505050;
+  	transition: all 0.5s ease-out 0s; /* transition: property duration timing-function delay; */
+  }
+
+  .nav_ul li a {
+  	line-height: 60px; /* same as nav */
+  	padding: 0px 20px; /* padding: vertical horizontal; */
+  	font-family: "Lato", sans-serif;
+  	font-weight: bold;
+  	font-size: 20px;
+  	color: white;
+  }
+
+  /* logo and login have classes to change position and font easily */
+
+  /* to make log center aligned you need to make another ul and use  margin: 0 auto; */
+  .nav_ul #logo {
+  	font-family: "Satisfy", cursive;
+  	font-size: 40px;
+  	color: deepskyblue;
+  }
+
+  .nav_ul #login_li {
+  	float: right;
+  }
+
+  /* making the nav bar responsive for small screens */
+  .responsive_menu_div {
+  	cursor: pointer;
+  	display: none;
+  	width: 100%;
+  	height: 40px;
+  	background-color: #404040;
+  }
+
+  .responsive_menu_div #bar_icon_div {
+  	padding: 0px 8px; /* icon has wierd dimensions, this makes it look centered */
+  	line-height: 40px; /* center in div */
+  	text-align: right;
+  	color: white;
+  	font-size: 30px;
+  }
+
+  @media (max-width: 650px) {
+  	.responsive_menu_div {
+  		display: block; /* display menu on new line above list */
+  	}
+
+  	.nav_ul {
+  		width: 100%;
+  	}
+
+  	.nav_ul li {
+  		display: block;
+  	}
+
+  	.nav_ul #login_li {
+  		display: block;
+  		float: left;
+  		width: 100%;
+  	}
+  }
+
+
+
+  hr{
+  height: 1px;
+  color: red;
+  background-color: black;
+  border: none;
+}
+
+  footer {
+    background-color: 	#E8E8E8;
+    padding: 50px;
+    width: 100%;
+    text-align: left;
+    color: white;
+  }
+  </style>
+
+  <header>
+    <nav>
+      <div class="responsive_menu_div" onclick="menuButton()">
+        <div id="bar_icon_div">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <ul class="nav_ul">
+        <li><a id="logo" href="home_page.html">whoops!</a></li>
+        <li><a href="information_page.html">Information</a></li>
+        <li><a href="about_US.html">About Us</a></li>
+        <li><a href="feedback_page.html">Feedback</a></li>
+        <li id="login_li"><a href="login_page.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section       -when you hover over food it dims photo and shows price of it -->
+
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Menu</h3>
+  </div>
+
+  <div class="w3-row-padding">
+
+
+    <div class="w3-col l3 m1 w3 w3-margin-bottom ">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off" style="transition:0.5s;width:100%">
+        <div class="w3-display-topleft w3-text-black w3-padding w3-text-Black"><b>Big Mac</b></div>
+        <img src="Bigmac.jpg"  style="width:100%">  <div class="w3-display-middle w3-display-hover">
+  </div>
+
+      </div>
+    </div>
+    <div class="w3-col l3 m1 w3 w3-margin-bottom">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off">
+        <div class="w3-display-topleft w3-text-black  w3-padding"><b>Quarter Pounder</b></div>
+        <img src="QuarterPounder.jpg" style="width:85%">
+
+      </div>
+    </div>
+    <div class="w3-col l3 m1 w3 w3-margin-bottom">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off">
+        <div class="w3-display-topleft w3-text-black w3-padding"><b>Cheese Burger</b></div>
+        <img src="CheeseBurger.jpg" style="width:90%">
+      </div>
+    </div>
+    <div class="w3-col l3 m1 w3 w3-margin-bottom">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off">
+        <div class="w3-display-topleft w3-text-black w3-padding "><b>Double Cheese Burger</b></div>
+        <img src="DoubleCheese.jpg" style="width:85%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m1 w3 w3-margin-bottom">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off">
+        <div class="w3-display-topleft w3-text-black  w3-padding"><b>Crispy Chicken</b></div>
+        <img src="CrispyChicken.jpg" style="width:75%">
+      </div>
+    </div>
+    <div class="w3-col l3 m1 w3 w3-margin-bottom">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off">
+        <div class="w3-display-topleft w3-text-black w3-padding"><b>Junior Chicken</b></div>
+        <img src="JuniorChicken.jpg"
+        style="width:90%">
+      </div>
+    </div>
+    <div class="w3-col l3 m1 w3 w3-margin-bottom">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off">
+        <div class="w3-display-topleft w3-text-black w3-padding"><b>Combo #1</b></div>
+        <img src="Combo1.jpg" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m1 w3 w3-margin-bottom">
+      <div class="w3-display-container w3-opacity-min w3-hover-opacity-off">
+        <div class="w3-display-topleft w3-text-black w3-padding"><b>Combo #2</b></div>
+        <img src="Combo2.jpg" style="width:99%">
+      </div>
+    </div>
+  </div>
+
+  <!-- Place Order -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Place Order</h3>
+    <h4>Press order once finish selecting.</h4>
+    <form action="/action_page.php">
+    <!--  <button class="w3-button w3-black w3-section"> <i class="fa fa-paper-plane"></i> Add New Item  </button> -->
+      <br>
+      <h4>Selections:</h4>
+      <br>
+          <label for="menu">Big Mac   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            Price: $4.99  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Amount:</label>
+          <select id="BigMac_Amount" name="BigMac_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br><br>
+
+          <label for="menu">Quarter Pounder    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           Price: $3.75 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount:</label>
+          <select id="Quarter_Pounder_Amount" name="Quarter_Pounder_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br><br>
+
+          <label for="menu">Cheese Burger     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          Price: $1.99 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount:</label>
+          <select id="Cheese_Burger_Amount" name="Cheese_Burger_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br><br>
+
+          <label for="menu">Double Cheese Burger    &nbsp;&nbsp;           Price: $2.99 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount:</label>
+          <select id="Double_Cheese_Burger_Amount" name="Double_Cheese_Burger_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br><br>
+
+          <label for="menu">Crispy Chicken     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         Price: $6.95 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount:</label>
+          <select id="Crispy_Chicken_Amount" name="Crispy_Chicken_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br><br>
+
+          <label for="menu">Junior Chicken   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          Price: $1.99 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount:</label>
+          <select id="Junior_Chicken_Amount" name="Junior_Chicken_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br><br>
+
+          <label for="menu">Combo 1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         Price: $10.99 &nbsp;&nbsp;&nbsp;  Amount:</label>
+          <select id="Combo_1_Amount" name="Combo_1_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br><br>
+
+          <label for="menu">Combo 2    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        Price: $12.99 &nbsp;&nbsp;&nbsp; Amount:</label>
+          <select id="Combo_2_Amount" name="Combo_2_Amount">
+          <option value="#">0</option>
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          </select>
+          <br>
+
+          <br>
+          <br>
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> Order
+      </button>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer >
+  <h1 style="color:Black">Whoops!</h1><br>
+    <hr>
+      <a href="https://www.apple.com/ca/ios/app-store/"> <img src="https://cdn.worldvectorlogo.com/logos/download-on-the-app-store-apple-2.svg" style= "width:143px;height:70px;"></a>
+      <a href="https://play.google.com/store/apps?utm_source=na_Med&utm_medium=hasem&utm_content=Feb2117&utm_campaign=Evergreen&pcampaignid=MKT-DR-na-ca-1001279-Med-hasem-ap-Evergreen-Feb2117-Text_Search_SKWS-id_100254_%7cEXA%7cONSEM_kwid_43700041516193748&gclid=CjwKCAiAgqDxBRBTEiwA59eENxQSdAdoBAWFEVtrVmHc8XLYN7aUomkADOVWw5uDjK-_j6_PwemmARoC1sEQAvD_BwE&gclsrc=aw.ds"> <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style= "width:160px;height:70px;"></a>
+
+    <br>
+    <hr style="color:Black">
+
+      <p style="color:Black">@Whoops! Inc. </p>
+      <p style="color:Black">Terms </p>
+    <br>
+    <hr style="color:Black">
+    <a href="https://www.instagram.com/?hl=en"> <img src="https://i.imgur.com/t2PimyM.jpg" style= "width:100px;height:80px;"></a>
+    <a href="https://twitter.com/?lang=en"> <img src="https://i.imgur.com/Y1cZdNk.jpg" style= "width:100px;height:80px;"></a>
+</footer>
+
+</body>
+</html>

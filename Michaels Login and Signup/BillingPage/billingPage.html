@@ -1,0 +1,210 @@
+<link rel="stylesheet" href="billingPage.css">
+<script src="billingPage.js"></script>
+<div class="row">
+  <div class="col-50">
+    <div class="container">
+      <form action="/action_page.php">
+        <style>
+        * {
+        	box-sizing: border-box;
+        	margin: 0;
+        	padding: 0;
+        	list-style: none;
+        	text-decoration: none;
+        }
+
+        a:visited {
+        	color: white;
+        }
+
+        /* navigation bar */
+        nav {
+        	overflow: auto;
+        	width: 100%;
+        	background-color: dimgray;
+        }
+
+        .nav_ul {
+        	margin: 0 auto;
+        	cursor: pointer;
+        }
+
+        .nav_ul li {
+        	display: inline-block;
+        }
+
+        .nav_ul li:hover {
+        	background-color: #505050;
+        	transition: all 0.5s ease-out 0s; /* transition: property duration timing-function delay; */
+        }
+
+        .nav_ul li a {
+        	line-height: 60px; /* same as nav */
+        	padding: 0px 20px; /* padding: vertical horizontal; */
+        	font-family: "Lato", sans-serif;
+        	font-weight: bold;
+        	font-size: 20px;
+        	color: white;
+        }
+
+        /* logo and login have classes to change position and font easily */
+
+        /* to make log center aligned you need to make another ul and use  margin: 0 auto; */
+        .nav_ul #logo {
+        	font-family: "Satisfy", cursive;
+        	font-size: 40px;
+        	color: deepskyblue;
+        }
+
+        .nav_ul #login_li {
+        	float: right;
+        }
+
+        /* making the nav bar responsive for small screens */
+        .responsive_menu_div {
+        	cursor: pointer;
+        	display: none;
+        	width: 100%;
+        	height: 40px;
+        	background-color: #404040;
+        }
+
+        .responsive_menu_div #bar_icon_div {
+        	padding: 0px 8px; /* icon has wierd dimensions, this makes it look centered */
+        	line-height: 40px; /* center in div */
+        	text-align: right;
+        	color: white;
+        	font-size: 30px;
+        }
+
+        @media (max-width: 650px) {
+        	.responsive_menu_div {
+        		display: block; /* display menu on new line above list */
+        	}
+
+        	.nav_ul {
+        		width: 100%;
+        	}
+
+        	.nav_ul li {
+        		display: block;
+        	}
+
+        	.nav_ul #login_li {
+        		display: block;
+        		float: left;
+        		width: 100%;
+        	}
+        }
+
+        hr{
+        height: 1px;
+        color: red;
+        background-color: black;
+        border: none;
+      }
+
+        footer {
+          background-color: 	#E8E8E8;
+          padding: 50px;
+          width: 100%;
+          text-align: left;
+          color: white;
+        }
+        </style>
+        <header>
+          <nav>
+            <div class="responsive_menu_div" onclick="menuButton()">
+              <div id="bar_icon_div">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+            <ul class="nav_ul">
+              <li><a id="logo" href="home_page.html">whoops!</a></li>
+              <li><a href="information_page.html">Information</a></li>
+              <li><a href="about_US.html">About Us</a></li>
+              <li><a href="feedback_page.html">Feedback</a></li>
+              <li id="login_li"><a href="login_page.html">Login</a></li>
+            </ul>
+          </nav>
+        </header>
+        <br>
+        <br>
+
+        <div class="row">
+          <div class="col-25">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="FullName"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="FullEmail"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="FullAddress"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="123 Elizabeth Avenue">
+            <label for="city"><i class="FullCity"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Toronto">
+
+            <div class="row">
+              <div class="col-25">
+                <label for="province">Province</label>
+                <input type="text" id="province" name="province" placeholder="ON">
+              </div>
+              <div class="col-25">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="L7E5V5">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-25">
+            <h3>Payment</h3>
+            <label >
+              <input type="checkbox" id="myCheck" onclick="myFunction()" name="sameadr"> Will you be paying by card?
+          <!-- add a DOM munipulation for:  If the box is check out text will come out saying "please fill in infomation below" -->
+              <p id="text" style="display:none">Please fill in information below</p>
+
+            </label>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="row">
+              <div class="col-25">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-25">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Checkout" class="btn">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer >
+  <h1 style="color:Black">Whoops!</h1><br>
+    <hr>
+      <a href="https://www.apple.com/ca/ios/app-store/"> <img src="https://cdn.worldvectorlogo.com/logos/download-on-the-app-store-apple-2.svg" style= "width:143px;height:70px;"></a>
+      <a href="https://play.google.com/store/apps?utm_source=na_Med&utm_medium=hasem&utm_content=Feb2117&utm_campaign=Evergreen&pcampaignid=MKT-DR-na-ca-1001279-Med-hasem-ap-Evergreen-Feb2117-Text_Search_SKWS-id_100254_%7cEXA%7cONSEM_kwid_43700041516193748&gclid=CjwKCAiAgqDxBRBTEiwA59eENxQSdAdoBAWFEVtrVmHc8XLYN7aUomkADOVWw5uDjK-_j6_PwemmARoC1sEQAvD_BwE&gclsrc=aw.ds"> <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style= "width:160px;height:70px;"></a>
+
+    <br>
+    <hr style="color:Black"><br>
+
+      <p style="color:Black">@Whoops! Inc. </p>
+      <p style="color:Black">Terms </p>
+    <br>
+    <hr style="color:Black"><br>
+    <a href="https://www.instagram.com/?hl=en"> <img src="https://i.imgur.com/t2PimyM.jpg" style= "width:100px;height:80px;"></a>
+    <a href="https://twitter.com/?lang=en"> <img src="https://i.imgur.com/Y1cZdNk.jpg" style= "width:100px;height:80px;"></a>
+</footer>
