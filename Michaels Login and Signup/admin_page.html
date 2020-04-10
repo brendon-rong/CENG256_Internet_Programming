@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
-        <link href="feedback.css" rel="stylesheet">
+        <link href="admin.css" rel="stylesheet">
         <!-- font awesome icons -->
         <script src="https://kit.fontawesome.com/18de49befa.js"></script>
         <script src="script.js"></script>
@@ -18,8 +18,8 @@
             }
 
             .rectangle {
-                height: 615px;
-                width: 350px;
+                height: 575px;
+                width: 450px;
                 background-color: dimgray;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);
             }
@@ -48,8 +48,8 @@
     <body>
 
         <?php
-        $restaurant_error = $product_id_error = $product_name_error = $availabilityErr = $product_desc_error = "";
-        $restaurant_id = $product_id = $product_name = $product_desc = $availability = "";
+        $restaurant_error = $product_id_error = $product_name_error = $product_desc_error = "";
+        $restaurant_id = $product_id = $product_name = $product_desc = "";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (empty($_POST["restaurant_id"])) {
@@ -121,17 +121,17 @@
                         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
                             <label for="product_id" id="product_id_label"><span class="feedText"> Product ID <span class="redText">*<?php echo $product_id_error; ?></span></span></label>
-                            <input type="text" class="text-line" id="product_id" placeholder="Product ID" name="product_id" size="45">
+                            <input type="text" class="text-line" id="product_id" placeholder="Enter Product ID..." name="product_id" size="45" value="<?php echo $product_id;?>">
 
                             <label for="product_name" id="product_name_label"><span class="feedText">Product Name<span class="redText">*<?php echo $product_name_error; ?></span></span></label>
-                            <input type="text" class="text-line" id="lastName" placeholder="Product Name..." name="lastName" size="45">
+                            <input type="text" class="text-line" id="product_name" placeholder="Enter Product Name..." name="product_name" size="45" value="<?php echo $product_name;?>">
 
                             <label for="restaurant_id" id="restaurant_id_label"><span class="feedText">Restaurant ID<span class="redText">*<?php echo $restaurant_error; ?></span></span></label>
-                            <input type="text" class="text-line" id="email" placeholder="Enter Email Address..." name="email" size="45">
+                            <input type="text" class="text-line" id="restaurant_id" placeholder="Enter Restaurant ID..." name="restaurant_id" size="45" value="<?php echo $restaurant_id;?>">
 
                             <label for="product_desc"><span class="feedText">Product Description</span></label><br>
 							
-                            <textarea for="product_desc" style="max-width:300px" rows="4" placeholder="Type your description here..." name="review" id="review_review"></textarea><br></br>
+                            <textarea style="max-width:400px" rows="5" placeholder="Type your description here..." name="review" id="review_review"></textarea><br></br>
 
                             <button type="submit" class="button buttonBlue" id="submit_btn" value="Send" style="font-family: 'Lato', sans-serif;"><b>Submit</b></button>
                         </form>
