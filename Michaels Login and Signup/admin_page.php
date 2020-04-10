@@ -118,7 +118,7 @@
                 <br>
                 <div class="container">
                     <div class="rectangle">
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> //Might have to change this action to addproduct.html
 
                             <label for="product_id" id="product_id_label"><span class="feedText"> Product ID <span class="redText">*<?php echo $product_id_error; ?></span></span></label>
                             <input type="text" class="text-line" id="product_id" placeholder="Enter Product ID..." name="product_id" size="45" value="<?php echo $product_id;?>">
