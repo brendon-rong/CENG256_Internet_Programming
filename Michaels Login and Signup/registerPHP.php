@@ -12,8 +12,8 @@
       .error {color:#FF0000;}
 
       .rectangle {
-        height: 410px;
-        width: 200px;
+        height: 570px;
+        width: 250px;
         background-color: dimgray;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);
       }
@@ -44,28 +44,28 @@
 	<body>
 		<?php
 			//define variables and set to empty values
-			 $firstNameErr = $lastNameErr = $emailErr = $phoneNumberErr = $usernameErr = $passwordErr = "";
-			 $firstName = $lastName = $email = $phoneNumber = $username = $password = "";
+			 $firstnameErr = $lastnameErr = $emailErr = $phonenumberErr = $usernameErr = $passwordErr = "";
+			 $firstname = $lastname = $email = $phonenumber = $username = $password = "";
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-				//FIRST NAME
-				 if (empty($_POST["firstName"])) {
-					$firstNameErr = "First name is required!";
+				 //FIRST NAME
+				 if (empty($_POST["firstname"])) {
+					$firstnameErr = "First name is required!";
 				  } else {
-					$firstName = test_input($_POST["firstName"]);  // clears spaces etc to prep data for testing
-					if (!preg_match("/^[a-zA-Z-]+$/",$firstName)){ // MAKE SURE IT ONLY CONTAINS LETTERS
-						$firstNameErr=" Must contain only letters!";
+					$firstname = test_input($_POST["firstname"]);  // clears spaces etc to prep data for testing
+					if (!preg_match("/^[a-zA-Z-]{0,19}.$/",$firstname)){ // MAKE SURE IT ONLY CONTAINS LETTERS
+						$firstnameErr=" Must contain only letters!";
 					}
 				  }
 
 				  //LAST NAME
-				  if (empty($_POST["lastName"])) {
-					$lastNameErr = "Last name is required!";
+				  if (empty($_POST["lastname"])) {
+					$lastnameErr = "Last name is required!";
 				  } else {
-					$lastName = test_input($_POST["lastName"]); // clears spaces etc to prep data for testing
-					if (!preg_match("/^[a-zA-Z]+$/",$lastName)){ // MAKE SURE IT ONLY CONTAINS LETTERS
-						$lastNameErr=" Must contain only letters!";
+					$lastname = test_input($_POST["lastname"]); // clears spaces etc to prep data for testing
+					if (!preg_match("/^[a-zA-Z]{0,19}.$/",$lastname)){ // MAKE SURE IT ONLY CONTAINS LETTERS
+						$lastnameErr=" Must contain only letters!";
 					}
 				  }
 
@@ -79,13 +79,13 @@
 					}
 				  }
 
-				 //PHONE NUMBER
-				 if (empty($_POST["phoneNumber"])) {
-					$phoneNumberErr = "Phone Number is required!";
+				  //PHONE NUMBER
+				  if (empty($_POST["phonenumber"])) {
+					$phonenumberErr = "Phone Number is required!";
 				  } else {
-					$phoneNumber = test_input($_POST["phoneNumber"]);  // clears spaces etc to prep data for testing
-					if (!preg_match("/^(?=.*\d).{10}$/",$phoneNumber)){ // MAKE SURE IT ONLY CONTAINS NUMBERS
-						$phoneNumberErr=" Must contain only letters!";
+					$phonenumber = test_input($_POST["phonenumber"]);  // clears spaces etc to prep data for testing
+					if (!preg_match("/^[\d]{9}.$/",$phonenumber)){ // MAKE SURE IT ONLY CONTAINS NUMBERS
+						$phonenumberErr=" Must contain only numbers!";
 					}
 				  }
 
@@ -94,8 +94,8 @@
 					$usernameErr = "Username is required!";
 				  } else {
 					$username = test_input($_POST["username"]); // clears spaces etc to prep data for testing
-					if (!preg_match("/[^A-Za-z\w]+$/",$username)){ // MAKE SURE IT ONLY CONTAINS LETTERS AND _
-						$usernameErr=" Must contain only letters!";
+					if (!preg_match("/^[A-Za-z1-9\w]+$/",$username)){ // MAKE SURE IT ONLY CONTAINS LETTERS AND _
+						$usernameErr=" Must contain only letters, numbers, and or underscore(s)!";
 					}
 				  }
 
@@ -108,12 +108,12 @@
 					if (!preg_match("/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{5,100}$/",$password)){ // MAKE SURE IT CONTAINS THE PASSWORDS NEEDS
 						$passwordErr=" Must contain atleast 5 (five) characters including 1 (one) number and 1 (one) uppercase letter!";
 					}
-				}
+				 }
 
-				//continues to target page if all validation is passed
-				if ( $firstNameErr ==""&& $lastNameErr ==""&& $emailErr ==""&& $phoneNumberErr ==""&& $usernameErr ==""&& $passwordErr =="")
+   				 //continues to target page if all validation is passed
+				 if ($firstnameErr == "" && $lastnameErr == "" && $emailErr == "" && $phonenumberErr == "" && $usernameErr == "" && $passwordErr == ""){
 					// check if exists in database
-					$dbc=mysqli_connect('localhost','root','admin','whoops')
+					$dbc=mysqli_connect('localhost','admin','password','whoops')
 					or die("Could not Connect!\n");
 					$sqlUsername = "SELECT * from login WHERE username ='$username';";
 					$resultUsername = mysqli_Query($dbc,$sqlUsername) or die (" Error querying database");
@@ -131,12 +131,12 @@
 						$hashpass = hash('ripemd256',$password);
 						$sqlLogin = "INSERT INTO login VALUES(NULL,'$username','$hashpass', 1);";
 						$resultLogin = mysqli_Query($dbc,$sqlLogin) or die (" Error querying database");
-						$sqlCustomer = "INSERT INTO customer VALUES(NULL,'$firstName','$lastName','$phoneNumber','$email');";
+						$sqlCustomer = "INSERT INTO customer VALUES(NULL,'$firstname','$lastname','$phonenumber','$email');";
 						$resultCustomer = mysqli_Query($dbc,$sqlCustomer) or die (" Error querying database");
 						mysqli_close();
-						header('Location: /project/login.php');
+						header('Location: /project/loginPHP.php');
 					}
-				}
+				 }
 			}
 
 		       // clears spaces etc to prep data for testing
@@ -176,23 +176,23 @@
 
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				<label for="firstname" style="font-family: 'Lato', sans-serif; color: white;">First Name</label><br>
-				<input type="text" name="firstname" id="firstname" placeholder="First Name" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $firstName;?>"/><br>
-				<span class="error">* <?php echo $firstNameErr;?></span><br>
+				<input type="text" name="firstname" id="firstname" placeholder="First Name" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $firstname;?>"/><br>
+				<span class="error">* <?php echo $firstnameErr;?></span><br>
 
 				<label for="lastname" style="font-family: 'Lato', sans-serif; color: white;">Last Name</label><br>
-				<input type="text" name="lastname" id="lastname" placeholder="Last Name" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $lastName;?>"/><br>
-				<span class="error">* <?php echo $lastNameErr;?></span><br>
+				<input type="text" name="lastname" id="lastname" placeholder="Last Name" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $lastname;?>"/><br>
+				<span class="error">* <?php echo $lastnameErr;?></span><br>
 
 				<label for="email" style="font-family: 'Lato', sans-serif; color: white;">Email</label><br>
-				<input type="email" name="email" id="email" placeholder="example@example.com" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $email;?>"/><br>
+				<input type="text" name="email" id="email" placeholder="example@example.com" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $email;?>"/><br>
 				<span class="error">* <?php echo $emailErr;?></span><br>
 
 				<label for="phonenumber" style="font-family: 'Lato', sans-serif; color: white;">Phone Number</label><br>
-				<input type="phonenumber" name="phonenumber" id="phonenumber" placeholder="4161237654" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $phoneNumber;?>"/><br>
-				<span class="error">* <?php echo $phoneNumberErr;?></span><br>
+				<input type="text" name="phonenumber" id="phonenumber" placeholder="4161237654" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $phonenumber;?>"/><br>
+				<span class="error">* <?php echo $phonenumberErr;?></span><br>
 
 				<label for="username" style="font-family: 'Lato', sans-serif; color: white;">Username</label><br>
-				<input type="username" name="username" id="username" placeholder="example@example.com" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $username;?>"/><br>
+				<input type="text" name="username" id="username" placeholder="Username" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);" value="<?php echo $username;?>"/><br>
 				<span class="error">* <?php echo $usernameErr;?></span><br>
 
 				<label for="password" style="font-family: 'Lato', sans-serif; color: white;">Password</label><br>
@@ -206,6 +206,14 @@
           	<p style="font-family: 'Lato', sans-serif;">Login over <b><a href="loginPHP.php" style="color: black">here</a></b>!</p>
 
 	      	</center>
+	      	<?php
+	      	echo $firstname."<br/>";
+	      	echo $lastname."<br/>";
+	      	echo $email."<br/>";
+	      	echo $phonenumber."<br/>";
+	      	echo $username."<br/>";
+	      	echo $password."<br/>";
+	      	?>
 	    </main>
 	</body>
 </html>
