@@ -12,8 +12,8 @@
       .error {color:#FF0000;}
 
       .rectangle {
-        height: 295px;
-        width: 200px;
+        height: 360px;
+        width: 250px;
         background-color: dimgray;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 0px 20px 0 rgba(0, 0, 0, .5);
       }
@@ -61,7 +61,7 @@
         //continues to target page if all validation is passed
         if ( $usernameErr == "" && $passwordErr == ""){
           // check if exists in database
-          $dbc = mysqli_connect('localhost','root','admin','whoops')
+          $dbc = mysqli_connect('localhost','admin','password','whoops')
           or die("Could not connect!\n");
           $hashpass = hash('ripemd256',$password);
           $sql = "SELECT * from login WHERE username = '$username' AND password = '$hashpass';";
