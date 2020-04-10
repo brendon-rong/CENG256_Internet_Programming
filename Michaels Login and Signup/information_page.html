@@ -10,7 +10,114 @@
   <script src="script.js"></script>
   <title>Default</title>
 </head>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
 
+a:visited {
+  color: white;
+}
+
+/* navigation bar */
+nav {
+  overflow: auto;
+  width: 100%;
+  background-color: dimgray;
+}
+
+.nav_ul {
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.nav_ul li {
+  display: inline-block;
+}
+
+.nav_ul li:hover {
+  background-color: #505050;
+  transition: all 0.5s ease-out 0s; /* transition: property duration timing-function delay; */
+}
+
+.nav_ul li a {
+  line-height: 60px; /* same as nav */
+  padding: 0px 20px; /* padding: vertical horizontal; */
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+/* logo and login have classes to change position and font easily */
+
+/* to make log center aligned you need to make another ul and use  margin: 0 auto; */
+.nav_ul #logo {
+  font-family: "Satisfy", cursive;
+  font-size: 40px;
+  color: deepskyblue;
+}
+
+.nav_ul #login_li {
+  float: right;
+}
+
+/* making the nav bar responsive for small screens */
+.responsive_menu_div {
+  cursor: pointer;
+  display: none;
+  width: 100%;
+  height: 40px;
+  background-color: #404040;
+}
+
+.responsive_menu_div #bar_icon_div {
+  padding: 0px 8px; /* icon has wierd dimensions, this makes it look centered */
+  line-height: 40px; /* center in div */
+  text-align: right;
+  color: white;
+  font-size: 30px;
+}
+
+@media (max-width: 650px) {
+  .responsive_menu_div {
+    display: block; /* display menu on new line above list */
+  }
+
+  .nav_ul {
+    width: 100%;
+  }
+
+  .nav_ul li {
+    display: block;
+  }
+
+  .nav_ul #login_li {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+}
+
+hr{
+height: 1px;
+color: red;
+background-color: black;
+border: none;
+}
+
+footer {
+  background-color: 	#E8E8E8;
+  padding: 50px;
+  width: 100%;
+  text-align: left;
+  color: white;
+}
+</style>
 <body>
   <header>
     <nav>
@@ -117,8 +224,21 @@
 
 
   </main>
-  <footer>
-    <!--A copyright in the footer with the student names and id numbers-->
+  <footer >
+    <h1 style="color:Black">Whoops!</h1><br>
+      <hr>
+        <a href="https://www.apple.com/ca/ios/app-store/"> <img src="https://cdn.worldvectorlogo.com/logos/download-on-the-app-store-apple-2.svg" style= "width:143px;height:70px;"></a>
+        <a href="https://play.google.com/store/apps?utm_source=na_Med&utm_medium=hasem&utm_content=Feb2117&utm_campaign=Evergreen&pcampaignid=MKT-DR-na-ca-1001279-Med-hasem-ap-Evergreen-Feb2117-Text_Search_SKWS-id_100254_%7cEXA%7cONSEM_kwid_43700041516193748&gclid=CjwKCAiAgqDxBRBTEiwA59eENxQSdAdoBAWFEVtrVmHc8XLYN7aUomkADOVWw5uDjK-_j6_PwemmARoC1sEQAvD_BwE&gclsrc=aw.ds"> <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style= "width:160px;height:70px;"></a>
+
+      <br>
+      <hr style="color:Black"><br>
+
+        <p style="color:Black">@Whoops! Inc. </p>
+        <p style="color:Black">Terms </p>
+      <br>
+      <hr style="color:Black"><br>
+      <a href="https://www.instagram.com/?hl=en"> <img src="https://i.imgur.com/t2PimyM.jpg" style= "width:100px;height:80px;"></a>
+      <a href="https://twitter.com/?lang=en"> <img src="https://i.imgur.com/Y1cZdNk.jpg" style= "width:100px;height:80px;"></a>
   </footer>
 </body>
 
