@@ -83,7 +83,22 @@
             }
 
             if ($restaurant_error == "" && $product_id_error == "" && $product_name_error == "" && $product_desc_error == "")
-                header('Location: /lab01/targetPage.html');
+                $product_id = $_POST['product_id'];
+                $product_name = $_POST['product_name'];
+                $restaurant_id = $_POST['restaurant_id'];
+                $product_desc = $_POST['product_desc'];
+
+                $dbc = mysqli_connect('localhost', 'admin', 'password', 'whoops') or die ("Could not Connect! \n");
+
+                $sql = "INSERT INTO product VALUES ('$product_id','$product_name','$restaurant_id', '$product_desc');";
+
+                echo "Connection established. \n";
+
+                $result = mysqli_query($dbc, $sql) or die("Error Querying Database");
+
+                mysqli_close();
+                header('Location: /project/admin_page.php');
+                echo "Successful entry!\n";
         }
 
         function test_input($data) {
@@ -118,7 +133,7 @@
                 <br>
                 <div class="container">
                     <div class="rectangle">
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> //Might have to change this action to addproduct.html
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
                             <label for="product_id" id="product_id_label"><span class="feedText"> Product ID <span class="redText">*<?php echo $product_id_error; ?></span></span></label>
                             <input type="text" class="text-line" id="product_id" placeholder="Enter Product ID..." name="product_id" size="45" value="<?php echo $product_id;?>">
@@ -131,7 +146,7 @@
 
                             <label for="product_desc"><span class="feedText">Product Description</span></label><br>
 							
-                            <textarea style="max-width:400px" rows="5" placeholder="Type your description here..." name="review" id="review_review"></textarea><br></br>
+                            <textarea style="max-width:400px" rows="5" placeholder="Type your description here..." name="product_desc" id="product_desc"><?php echo $product_desc; ?></textarea><br></br>
 
                             <button type="submit" class="button buttonBlue" id="submit_btn" value="Send" style="font-family: 'Lato', sans-serif;"><b>Submit</b></button>
                         </form>
