@@ -77,7 +77,7 @@
             if($checkLevel == 1) {
               header('Location: /project/admin_page.php');    //ADD ORDER PAGE FOR ADMIN
             } else {
-              header('Location: /project/TESThomepage.php');      //NORMAL USER LOGIN
+              header('Location: /project/home_page.html');      //NORMAL USER LOGIN
             }      
           }
         }
