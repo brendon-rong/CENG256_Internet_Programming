@@ -67,16 +67,18 @@
           $sql = "SELECT * from login WHERE username = '$username' AND password = '$hashpass';";
           $result = mysqli_Query($dbc,$sql) or die (" Error querying database");
           $checkLogin = mysqli_num_rows($result);
-          $sqlLevel = "SELECT * from login WHERE level = '1';";
+          $sqlLevel = "SELECT username from login WHERE username = '$username' AND level = 0;";
           $resultLevel = mysqli_Query($dbc,$sqlLevel) or die (" Error querying database");
           $checkLevel = mysqli_num_rows($resultLevel);
 
           if ($checkLogin == 0){
             $loginErr="Invalid username or password";
-          }else if ($checkLogin != 0 && $checkLevel != 0){ 
-            header('Location: /project/homepage.html');     //NORMAL USER LOGIN
-          }else if ($checkLogin != 0 && $checkLevel == 0){
-            header('Location: /project/addorder.html');     //ADD ORDER PAGE FOR ADMIN
+          }else if ($checkLogin != 0){
+            if($checkLevel == 1) {
+              header('Location: /project/admin_page.php');    //ADD ORDER PAGE FOR ADMIN
+            } else {
+              header('Location: /project/TESThomepage.php');      //NORMAL USER LOGIN
+            }      
           }
         }
       }
