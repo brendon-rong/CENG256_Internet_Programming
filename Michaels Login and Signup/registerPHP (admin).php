@@ -160,7 +160,6 @@
 	          <li><a href="#">Information</a></li>
 	          <li><a href="#">About Us</a></li>
 	          <li><a href="#">Feedback</a></li>
-	          <li id="login_li"><a href="#">Login</a></li>
 	        </ul>
 	      </nav>
 	    </header>

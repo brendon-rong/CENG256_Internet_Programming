@@ -121,7 +121,7 @@
                     <li><a href="information_page.html">Information</a></li>
                     <li><a href="about_US.html">About Us</a></li>
                     <li><a href="feedback_page.html">Feedback</a></li>
-                    <li id="login_li"><a href="login_page.html">Login</a></li>
+                    <li id="login_li"><a href="loginPHP.php">Logout</a></li>
                 </ul>
             </nav>
         </header>
